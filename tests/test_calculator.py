@@ -20,6 +20,10 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_custom_delimiter(self):
         self.assertEqual(add("//;\n1;2"), 3)
-        
+
+    def test_custom_delimiter_with_different_symbol(self):
+        self.assertEqual(add("//|\n4|5|6"), 15)
+
+
 if __name__ == "__main__":
     unittest.main()
