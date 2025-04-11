@@ -33,6 +33,9 @@ class TestStringCalculator(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             add("1,-2,-4,3,-8")
         self.assertEqual(str(context.exception), "negative numbers not allowed -2,-4,-8")
+    
+    def test_invalid_input(self):             
+        self.assertEqual(add("1,nan, ,3,-8"), -1)
 
 
 if __name__ == "__main__":
