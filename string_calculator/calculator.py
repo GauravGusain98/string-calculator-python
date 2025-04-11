@@ -4,6 +4,7 @@ def add(numbers):
     
     delimiter = ','
     number_part = numbers
+    number_part = number_part.replace('\n', delimiter)
     string_number_list = number_part.split(delimiter)
     number_list = [int(num) for num in string_number_list]
 
