@@ -12,6 +12,15 @@ def add(numbers):
     number_part = number_part.replace('\n', delimiter)
     string_number_list = number_part.split(delimiter)
     number_list = [int(num) for num in string_number_list]
+    negatives = []
+    
+    for num in number_list:
+        if num < 0:
+            negatives.append(str(num))
+            
+    if negatives:
+        exception_message = f"negative numbers not allowed {','.join(negatives)}"
+        raise Exception(exception_message)
 
     return sum(number_list)
     
