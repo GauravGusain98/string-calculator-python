@@ -36,7 +36,9 @@ class TestStringCalculator(unittest.TestCase):
     
     def test_invalid_input(self):             
         self.assertEqual(add("1,nan, ,3,-8"), -1)
-
+        
+    def test_start_delimiter(self):
+        self.assertEqual(add("//*\n1*2*4"), 7)
 
 if __name__ == "__main__":
     unittest.main()
