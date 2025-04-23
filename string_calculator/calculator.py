@@ -1,6 +1,6 @@
 def add(numbers):
     if not numbers:
-        return 0
+        return -1
     
     delimiter = ','
     number_part = numbers
