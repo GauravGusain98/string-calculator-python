@@ -1,11 +1,11 @@
 def add(numbers):
-    try: 
-        if not numbers:
-            return 0
-        
-        delimiter = ','
-        number_part = numbers
+    if not numbers:
+        return 0
+    
+    delimiter = ','
+    number_part = numbers
 
+    try: 
         delimiter, number_part = find_delimiter(numbers)
         number_list = get_numbers_list(delimiter, number_part)
         is_negative_present, negatives = is_negative_present_in_list(number_list)
