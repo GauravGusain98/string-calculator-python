@@ -1,5 +1,5 @@
 import unittest
-from string_calculator.calculator import add
+from string_calculator.calculator import add, find_odd_numbers_list
 
 class TestStringCalculator(unittest.TestCase):
 
@@ -39,6 +39,13 @@ class TestStringCalculator(unittest.TestCase):
         
     def test_start_delimiter(self):
         self.assertEqual(add("//*\n1*2*4"), 7)
+    
+    def test_find_odd_numbers_from_list(self):
+        self.assertEqual(find_odd_numbers_list([1, 2, 3, 4]), [1, 3])
+    
+    def test_return_sum_of_odd_numbers_for_delimiter_o(self):
+        self.assertEqual(add("//o\n1o2o3o4"), 4)
+    
 
 if __name__ == "__main__":
     unittest.main()
